@@ -26,8 +26,8 @@ class Command(BaseCommand):
         nikolskaya, created = Street.objects.get_or_create(name = streets[1])
         for index, row in enumerate(shops):
             for shop in row:
-                opening_time = time(shop[2], 0)  # Установка времени открытия с минутами, установленными в 0
-                closing_time = time(shop[3], 0)  # Установка времени закрытия с минутами, установленными в 0
+                opening_time = time(shop[2], 0)
+                closing_time = time(shop[3], 0)
                 Shop.objects.get_or_create(
                     name=shop[0],
                     city=city,
