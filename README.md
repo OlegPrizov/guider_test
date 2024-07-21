@@ -1,4 +1,12 @@
-# Тестовое задание на python-разработчика для проекта guider.pro
+# Тестовое задание Python
+
+## Автор
+
+Автор: [Призов Олег](https://github.com/OlegPrizov/)
+
+## О проекте
+
+Проект представляет собой API для сервиса по поиску магазинов. 
 
 ## Как запустить проект
 
@@ -31,7 +39,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-2.2. Установите зависимости
+2.2. Установите и активируйте миграции
 
 ```
 python manage.py makemigrations
@@ -57,7 +65,7 @@ python manage.py data_loader
 python manage.py runserver
 ```
 
-### 3. Проверьте работоспособность проекта
+### 3. Проверьте работоспособность проекта.
 
 Для этого можно использовать [Postman](https://www.postman.com/downloads/)
 
@@ -130,7 +138,3 @@ python manage.py runserver
     }
 ]
 ```
-
-## Автор
-
-Автор: [Призов Олег](https://github.com/OlegPrizov/)
