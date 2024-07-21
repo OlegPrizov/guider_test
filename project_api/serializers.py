@@ -16,10 +16,29 @@ class StreetSerializer(serializers.ModelSerializer):
         model = Street
         fields = '__all__'
 
-class ShopSerializer(serializers.ModelSerializer):
-    city = CitySerializer()
-    srteet = StreetSerializer()
+class ShopCreateSerializer(serializers.ModelSerializer):
+    city = serializers.CharField()
+    street = serializers.CharField()
 
     class Meta:
         model = Shop
-        fields = '__all__'
+        fields = ['id', 'name', 'city', 'street', 'house_number', 'opening_time', 'closing_time']
+
+    def create(self, validated_data):
+        city_name = validated_data.pop('city')
+        street_name = validated_data.pop('street')
+        city, _ = City.objects.get_or_create(name=city_name)
+        street, _ = Street.objects.get_or_create(name=street_name, city=city)
+        return Shop.objects.create(city=city, street=street, **validated_data)
+    
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        return {'id': representation['id']}
+
+class ShopListSerializer(serializers.ModelSerializer):
+    city = serializers.CharField()
+    street = serializers.CharField()
+
+    class Meta:
+        model = Shop
+        fields = ['id', 'name', 'city', 'street', 'house_number', 'opening_time', 'closing_time']

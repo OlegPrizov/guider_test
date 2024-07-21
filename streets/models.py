@@ -7,8 +7,9 @@ class Street(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
 
     class Meta:
+        unique_together = ('name', 'city')
         verbose_name = 'Улица'
         verbose_name_plural = 'Улицы'
 
     def __str__(self) -> str:
-        return self.title
+        return self.name

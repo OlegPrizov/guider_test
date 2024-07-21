@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Street
+
+class StreetAdmin(admin.ModelAdmin):
+    list_display = ['pk', 'city', 'name']
+
+admin.site.register(Street, StreetAdmin)
