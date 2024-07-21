@@ -83,7 +83,7 @@ python manage.py runserver
 [
     {
         "id": 1,
-        "name": "Moscow"
+        "name": "Москва"
     }
 ]
 ```
@@ -98,7 +98,7 @@ python manage.py runserver
         "id": 1,
         "city": {
             "id": 1,
-            "name": "Moscow"
+            "name": "Москва"
         },
         "name": "Мясницкая"
     },
@@ -106,7 +106,7 @@ python manage.py runserver
         "id": 2,
         "city": {
             "id": 1,
-            "name": "Moscow"
+            "name": "Москва"
         },
         "name": "Никольская"
     }
@@ -129,14 +129,14 @@ python manage.py runserver
 ```
 - GET .../shop/?street=&city=&open=0/1 - получение списка магазинов. (Фильтры необязательны)
 
-Пример: http://127.0.0.1:8000/shop/?street=Никольская&city=Moscow&open=1
+Пример: http://127.0.0.1:8000/shop/?street=Никольская&city=Москва&open=1
 
 ```JSON
 [
     {
         "id": 6,
         "name": "Азбука вкуса",
-        "city": "Moscow",
+        "city": "Москва",
         "street": "Никольская",
         "house_number": 7,
         "opening_time": "01:00:00",
