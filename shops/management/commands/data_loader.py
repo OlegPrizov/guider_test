@@ -6,7 +6,7 @@ from shops.models import Shop
 from streets.models import Street
 from cities.models import City
 
-city_name = 'Moscow'
+city_name = 'Москва'
 streets = ['Мясницкая', 'Никольская']
 shops = [
     [['БукВышка', 20, 10, 19], ['Библио-Глобус', 6, 10, 21], ['Surf Coffee', 8, 1, 11]], 
