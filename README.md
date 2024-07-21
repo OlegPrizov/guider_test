@@ -130,3 +130,7 @@ python manage.py runserver
     }
 ]
 ```
+
+## Автор
+
+Автор: [Призов Олег](https://github.com/OlegPrizov/)
