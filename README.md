@@ -61,7 +61,9 @@ python manage.py runserver
 
 Для этого можно использовать [Postman](https://www.postman.com/downloads/)
 
-- GET /city/ — получение списка всех городов из базы данных;
+- GET .../city/ — получение списка всех городов из базы данных;
+
+Пример: http://127.0.0.1:8000/city/
 
 ```JSON
 [
@@ -72,7 +74,9 @@ python manage.py runserver
 ]
 ```
 
-- GET /city/{city_id}/street/ — получение списка всех улиц указанного города.
+- GET .../city/{city_id}/street/ — получение списка всех улиц указанного города.
+
+Пример: http://127.0.0.1:8000/city/1/street/
 
 ```JSON
 [
@@ -95,7 +99,9 @@ python manage.py runserver
 ]
 ```
 
-- POST /shop/ — создание нового магазина. Пример можете найти ниже.
+- POST .../shop/ — создание нового магазина. Пример можете найти ниже.
+
+Пример: http://127.0.0.1:8000/shop/
 
 ```JSON
 {
@@ -107,7 +113,9 @@ python manage.py runserver
     "closing_time": "21:15"
 }
 ```
-- GET /shop/?street=&city=&open=0/1 - получение списка магазинов. (Фильтры необязательны)
+- GET .../shop/?street=&city=&open=0/1 - получение списка магазинов. (Фильтры необязательны)
+
+Пример: http://127.0.0.1:8000/shop/?street=Никольская&city=Moscow&open=1
 
 ```JSON
 [
